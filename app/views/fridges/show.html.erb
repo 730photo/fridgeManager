@@ -1,0 +1,14 @@
+<h1><%= @fridge.location%> Fridge</h1> 
+
+<%= link_to("Edit", "/fridges/#{@fridge.id}/edit") %>
+<%= link_to("X", "/fridges/"+@fridge.id.to_s, method: :delete) %>
+
+<hr>
+
+<ul>
+<li>Brand: <%= @fridge.brand %></li>
+
+<li>Size: <%= @fridge.size %> cubic ft</li>
+</ul>
+
+<a href="/fridges/">Return to all Fridges</a>

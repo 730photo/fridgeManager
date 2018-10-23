@@ -1,0 +1,12 @@
+<h1>Fridges</h1> <a href="/fridges/new">(+)</a>
+
+<hr>
+
+<% @fridges.each do |fridge| %>
+<ul>
+  <li>
+  <%= link_to "#{fridge.location}", fridge_path(fridge) %>
+  </li>
+</ul>
+<% end %>
+

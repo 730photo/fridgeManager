@@ -1,0 +1,24 @@
+<h1>Create New Fridge</h1>
+
+<%= form_for @fridge do |fridge| %>
+  
+  <ul>
+
+  <li>
+  <%= fridge.label :location %>
+  <%= fridge.text_field :location %>
+  </li>
+  <li>
+  <%= fridge.label :brand %>
+  <%= fridge.text_field :brand %>
+  </li>
+  <li>
+  <%= fridge.label :size %>
+  <%= fridge.text_field :size %>
+  </li>
+
+  </ul>
+
+  <%= fridge.submit "Create" %>
+<% end %>
+
