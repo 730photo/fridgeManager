@@ -1,7 +1,7 @@
 <h1><%= @fridge.location%> Fridge</h1> 
 
-<%= link_to("Edit", "/fridges/#{@fridge.id}/edit") %>
-<%= link_to("X", "/fridges/"+@fridge.id.to_s, method: :delete) %>
+<%= link_to("edit", "/fridges/#{@fridge.id}/edit") %>
+<%= link_to("Throw Away", "/fridges/"+@fridge.id.to_s, method: :delete) %>
 
 <hr>
 

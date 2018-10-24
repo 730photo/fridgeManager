@@ -1,12 +1,8 @@
 class FridgesController < ApplicationController
   
   def create
-    @fridge = Fridge.new(fridge_params)
-    if @fridge.save
-      redirect_to @fridge
-    else
-      render :new
-    end
+    @Fridge = Fridge.create!(fridge_params)
+    redirect_to "/fridges/#{@Fridge.id}"
   end
 
   def destroy
@@ -30,5 +26,11 @@ class FridgesController < ApplicationController
 
   def edit
     @fridge = Fridge.find(params[:id])
+  end
+
+  private
+
+  def fridge_params
+    params.require(:fridge).permit(:location, :brand, :size)
   end
 end
